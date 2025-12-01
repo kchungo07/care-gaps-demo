@@ -50,16 +50,13 @@ Clone the repository
 git clone https://github.com/kchungo07/care-gaps-prototype.git
 cd care-gaps-prototype
 
-
 Install dependencies
 
 npm install
 
-
 Start the app
 
 npm start
-
 
 The application will open at
 http://localhost:3000
@@ -104,20 +101,21 @@ OBX|1|NM|4548-4^HBA1C^Hemoglobin A1c||6.7|%|4.0-6.0|H|||F|||20250201101500
 
 Demonstration Scenarios
 
-Closing a care gap with new lab data
-Upload a new A1c HL7 message and watch the “A1c overdue” gap disappear.
+Creating a new patient
+Upload a FHIR Bundle to create a new patient entry. 
+File: Oliva Example- new-fhir.json
+
+Updating a Patient
+ Update a patient's Clinical Timeline and Recommended Actions
+ File: John Smith-updated.json
 
 Timeline correction using backdated data
-Upload an older HL7 message and observe how it moves to the correct location in the timeline.
+Upload an older HL7 message and observe how it moves to the correct location in the timeline. Will update the Clinical Timeline, Care Gaps, and Recommended Actions
+File: Jane Doe Updated.json
 
-Creating a new patient
-Upload a FHIR Bundle to create a new patient entry. Oliva Example- new-fhir.json
-
-Hypertension monitoring gap
-Upload HL7 results without BP data to demonstrate BP gap persistence.
-
-Annual Wellness Visit updates
-Upload FHIR or HL7 encounter data to close the AWV gap.
+Closing a care gap with new lab data
+Upload a HL7 message and watch the “A1c overdue” gap disappear. This will update the clinical timeline as well as the HL7-FHIR at the bottom.  It will show the Raw HL7 format as well as the FHIR Format that it was mapped too.
+File: a1c-result-2025
 
 Architecture Summary
 
