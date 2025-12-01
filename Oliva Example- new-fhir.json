@@ -1,0 +1,111 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-file-1",
+        "name": [
+          {
+            "family": "Example",
+            "given": ["Olivia"]
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1965-04-12"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-f1",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "clinicalStatus": { "text": "active" },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44054006",
+              "display": "Diabetes mellitus type 2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-f2",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "clinicalStatus": { "text": "active" },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "38341003",
+              "display": "Hypertensive disorder"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-f1",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "period": { "start": "2024-04-30" },
+        "type": [{ "text": "Annual wellness visit" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-f2",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "period": { "start": "2023-02-14" },
+        "type": [{ "text": "Office visit" }]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-f1",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "effectiveDateTime": "2024-04-30",
+        "code": { "text": "Blood pressure" },
+        "valueString": "140/92"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-f2",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "effectiveDateTime": "2023-01-03",
+        "code": { "text": "Hemoglobin A1c" },
+        "valueQuantity": { "value": 8.2, "unit": "%" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-f3",
+        "subject": { "reference": "Patient/patient-file-1" },
+        "effectiveDateTime": "2022-01-09",
+        "code": { "text": "Hemoglobin A1c" },
+        "valueQuantity": { "value": 7.5, "unit": "%" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "imm-f1",
+        "patient": { "reference": "Patient/patient-file-1" },
+        "occurrenceDateTime": "2022-09-30",
+        "vaccineCode": { "text": "Influenza, seasonal" }
+      }
+    }
+  ]
+}

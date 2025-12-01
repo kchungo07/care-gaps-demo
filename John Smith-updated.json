@@ -1,0 +1,33 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-2",
+        "name": [
+          {
+            "family": "Smith",
+            "given": ["John"]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1978-09-02"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-john-awv-1",
+        "subject": { "reference": "Patient/patient-2" },
+        "period": { "start": "2025-06-01" },
+        "type": [
+          {
+            "text": "Annual wellness visit"
+          }
+        ]
+      }
+    }
+  ]
+}

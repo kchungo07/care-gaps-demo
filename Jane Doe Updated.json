@@ -1,0 +1,126 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-jane-a1c-new",
+        "subject": { "reference": "Patient/patient-1" },
+        "effectiveDateTime": "2025-01-10",
+        "code": { "text": "Hemoglobin A1c" },
+        "valueQuantity": { "value": 6.7, "unit": "%" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-jane-bp-new",
+        "subject": { "reference": "Patient/patient-1" },
+        "effectiveDateTime": "2025-01-12",
+        "code": { "text": "Blood pressure" },
+        "valueString": "124/77"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-jane-diabetes",
+        "subject": { "reference": "Patient/patient-1" },
+        "clinicalStatus": { "text": "active" },
+        "code": {
+          "coding": [
+            { "display": "Diabetes mellitus type 2" }
+          ]
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "cond-jane-hypertension",
+        "subject": { "reference": "Patient/patient-1" },
+        "clinicalStatus": { "text": "active" },
+        "code": {
+          "coding": [
+            { "display": "Hypertensive disorder" }
+          ]
+        }
+      }
+    },
+
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-jane-a1c-2022",
+        "subject": { "reference": "Patient/patient-1" },
+        "effectiveDateTime": "2022-01-09",
+        "code": { "text": "Hemoglobin A1c" },
+        "valueQuantity": { "value": 8.5, "unit": "%" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "imm-jane-flu-2022",
+        "patient": { "reference": "Patient/patient-1" },
+        "occurrenceDateTime": "2022-09-30",
+        "vaccineCode": { "text": "Influenza, seasonal" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-jane-a1c-2023",
+        "subject": { "reference": "Patient/patient-1" },
+        "effectiveDateTime": "2023-01-03",
+        "code": { "text": "Hemoglobin A1c" },
+        "valueQuantity": { "value": 8.2, "unit": "%" }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-jane-office-2023",
+        "subject": { "reference": "Patient/patient-1" },
+        "period": { "start": "2023-02-14" },
+        "type": [
+          { "text": "Office visit" }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "enc-jane-awv-2024",
+        "subject": { "reference": "Patient/patient-1" },
+        "period": { "start": "2024-04-30" },
+        "type": [
+          { "text": "Annual wellness visit" }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-jane-bp-2024",
+        "subject": { "reference": "Patient/patient-1" },
+        "effectiveDateTime": "2024-04-30",
+        "code": { "text": "Blood pressure" },
+        "valueString": "140/92"
+      }
+    },
+
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-1",
+        "name": [
+          { "family": "Doe", "given": ["Jane"] }
+        ],
+        "gender": "female",
+        "birthDate": "1965-04-12"
+      }
+    }
+  ]
+}
